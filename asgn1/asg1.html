@@ -5,9 +5,16 @@
 </head>
 <body>
 
-  <canvas id="webgl" width="400" height="400" style="display:block;"></canvas>
+  <table>
+    <tr>
+      <td><canvas id="webgl" width="400" height="400"></canvas></td>
+      <td style="padding-left:20px; vertical-align:top;">
+        <b>Reference Drawing:</b><br>
+        <img src="reference.jpg" width="300">
+      </td>
+    </tr>
+  </table>
 
-  <br>
   <button onclick="clearCanvas()">Clear Canvas</button>
   <button onclick="drawMyPicture()">Draw My Picture (O &amp; B)</button>
 
@@ -36,12 +43,7 @@
   <br><br>
   <small><b>Awesomeness note:</b> Added a <b>Star</b> drawing mode. A 5-pointed star is drawn using 10 triangles (fan from center, alternating outer and inner radius points). You can paint stars of any color and size just like the other shapes.</small>
 
-  <br><br>
-  <b>Reference Drawing:</b><br>
-  <img src="reference.jpg" width="300">
-
   <script>
-
     let gl;
     let a_Position;
     let u_FragColor;
